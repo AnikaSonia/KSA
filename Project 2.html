@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Indulgence</title>
+  </head>
+  <style>
+    body {
+      background: radial-gradient(
+        circle at 10% 20%,
+        rgba(216, 241, 230, 0.46) 0.1%,
+        rgba(233, 226, 226, 0.28) 90.1%
+      );
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .content {
+      max-width: 800px;
+      color: aliceblue;
+      background: radial-gradient(
+        780px at 37.8% 100.3%,
+        rgb(19, 55, 115) 2.2%,
+        rgb(32, 7, 80) 20.2%,
+        rgb(27, 88, 111) 58.6%,
+        rgb(115, 88, 44) 75%,
+        rgb(99, 19, 90) 89.6%,
+        rgb(12, 51, 76) 96.1%
+      );
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+    footer {
+      text-align: center;
+    }
+    .learn-more {
+      display: block;
+      margin: 0 auto;
+      color: aliceblue;
+      background: black;
+      border-radius: 10px;
+      padding: 10px 15px;
+    }
+
+    .theme-change {
+      background: black;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      padding: 10px 15px;
+      display: block;
+      margin: 0 auto;
+      margin: 0.8px solid rgb(160, 52, 70);
+    }
+    .main-image {
+      margin: 0 auto;
+      border-radius: 8px;
+      transition: all 200ms ease-in-out;
+    }
+
+    .main-image:hover {
+      filter: contrast(30%);
+      transform: scale(0.99);
+    }
+    .theme-change:hover {
+      background-color: white;
+      color: black;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      grid-gap: 10px;
+      border-radius: 10px;
+    }
+    .grid img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1.5;
+    }
+    .dark-theme {
+      background: linear-gradient(
+        179.4deg,
+        rgb(19, 1, 22) -16.9%,
+        rgb(18, 7, 22) 119.9%
+      );
+      color: white;
+    }
+
+    .dark-theme .content {
+      background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+      color: black;
+    }
+
+    .dark-theme a {
+      color: blanchedalmond;
+    }
+
+    .dark-theme .learn-more {
+      background: black;
+      color: aliceblue;
+    }
+  </style>
+  <body>
+    <button class="theme-change">Change theme</button>
+    <div class="content">
+      <h1>Black art, black excellence</h1>
+      <h2>A Celebration of Creativity and Resilience</h2>
+      <a href="https://zarastro.art/black-women-artists/" target="_blank"
+        ><img
+          src="https://images.unsplash.com/photo-1552793084-49132af00ff1?q=80&w=2865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="main-image"
+      /></a>
+      <div class="grid">
+        <img
+          src="https://zarastro.art/wp-content/uploads/2023/08/3_Toyin-Ojih-Odutola.webp"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1611645993755-b1866793b2a3?q=80&w=2856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+        <img
+          src="https://images.unsplash.com/photo-1577084381380-3b9ea4153664?q=80&w=2621&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+        <img
+          src="https://zarastro.art/wp-content/uploads/2023/08/Lorna-Simpson_Same.webp"
+          alt=""
+        />
+      </div>
+      <p>
+        <em>Black female artists</em> have been able to establish their voices
+        and claim their agency through their art, which has helped to create a
+        more varied and inclusive art scene. In challenging predominant
+        narratives and providing fresh perspectives on issues with
+        representation and power, their work frequently covers intersectional
+        experiences of identity, particularly those related to race, gender,
+        sexuality, and class.
+      </p>
+      <br />
+      <button class="learn-more">Curious about black art</button>
+    </div>
+    <br />
+    <footer>
+      Coded by 🤎
+      <a
+        class="page-link"
+        href="https://www.linkedin.com/in/karerasoniaanikaprofile/"
+        >Karera Sonia Anika</a
+      >
+    </footer>
+    <script>
+      function themeChange() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark-theme");
+      }
+
+      function learnMore() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let heading = document.querySelector("h1");
+        heading.innerHTML =
+          "Hi " + name + ", we'll be in touch via your email!";
+      }
+
+      let learnMoreButton = document.querySelector(".learn-more");
+      learnMoreButton.addEventListener("click", learnMore);
+
+      let themeChangeButton = document.querySelector(".theme-change");
+      themeChangeButton.addEventListener("click", themeChange);
+    </script>
+  </body>
+</html>
